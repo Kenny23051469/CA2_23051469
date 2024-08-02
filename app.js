@@ -29,10 +29,10 @@ const product_upload = multer({ storage: product_storage });
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'c237_cagassignment_kenny'
+    host: 'mysql-kennyca2.alwaysdata.net',
+    user: 'kennyca2',
+    password: 'Kennykenny123',
+    database: 'kennyca2_project'
 });
 
 connection.connect((err) => {
