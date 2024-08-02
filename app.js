@@ -65,6 +65,7 @@ app.get('/', (req, res) => {
     connection.query(sql, (error, results) => {
         if (error) {
             console.error('Database query error:', error.message);
+            console.log('Error:', error); // Added log for debugging
             return res.status(500).send('Error retrieving random products');
         }
         res.render('index', { products: results });
@@ -77,6 +78,7 @@ app.get('/productslist', (req, res) => {
     connection.query(sql, (error, results) => {
         if (error) {
             console.error('Database query error:', error.message);
+            console.log('Error:', error); // Added log for debugging
             return res.status(500).send('Error retrieving products');
         }
         res.render('productslist', { products: results, searchQuery: '' });
